@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import {React, Component} from 'react'
+import TitleBar from '../components/titleBar'
+import CustomCard from '../components/customCard'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import {React, Component} from 'react'
-import Clock from 'react-live-clock'
 
 class Home extends Component {
   constructor() {
@@ -17,20 +18,18 @@ class Home extends Component {
       <Head>
         <title>Francisco Funes</title>
       </Head>
-      <Container style={{ backgroundColor:'black', color:'white', padding:10, textAlign:'center' }} fluid>
+      <TitleBar mainTitle="Francisco Funes" mainSubTitle="Software Developer" info1="(805)452-8446" info2="franciscofunes5@gmail.com" info3="Based in Lompoc, CA"/>
+      <Container fluid>
         <Row>
-          <Col><h1>Francisco Funes</h1></Col>
-        </Row>
-        <Row>
-          <Col><h4>Software Developer</h4></Col>
-        </Row>
-        <hr />
-        <Row>
-          <Col md={{ span:4 }}><h5>(805) 452-8446</h5></Col>
-          <Col md={{ span:4 }}><h5>franciscofunes5@gmail.com</h5></Col>
-          <Col md={{ span:4 }}><h5>Based in Lompoc, CA</h5></Col>
+          <Col md={{span:6}}>
+            <CustomCard header="Projects" src="/csuci.jpg" title="California State University Channel Islands" subTitle="2018-2022" text="Obtained Bachelors in Computer Science."/>
+          </Col>
+          <Col md={{span:6}}>
+            <CustomCard header="Education" src="/csuci.jpg" title="California State University Channel Islands" subTitle="2018-2022" text="Obtained Bachelors in Computer Science."/>
+          </Col>
         </Row>
       </Container>
+      
       </>
     );
   }
