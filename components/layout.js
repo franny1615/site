@@ -11,7 +11,7 @@ export default function Layout({ children }) {
             crossOrigin="anonymous"
         />
         </Head>
-        <main>{children}</main>
+        <div>{children}</div>
     </>
   )
 }
