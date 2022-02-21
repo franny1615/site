@@ -4,6 +4,7 @@ export default function Layout({ children }) {
   return (
     <>
         <Head>
+        <title>Francisco Funes</title>
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -11,7 +12,7 @@ export default function Layout({ children }) {
             crossOrigin="anonymous"
         />
         </Head>
-        <div>{children}</div>
+        <div style={{background:'black', color:'white', padding:10}}>{children}</div>
     </>
   )
 }
