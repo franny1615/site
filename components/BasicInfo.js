@@ -9,24 +9,15 @@ class BasicInfo extends Component {
   render() {
     return (
       <>
-      <Container fluid>
-        <Row style={{textAlign:'center',padding:50}}>
-          <h1 className='display-2' ><b>Francisco Funes Alfaro</b></h1>
+      <Container style={{textAlign:'center',paddingTop:50}} fluid>
+        <Row>
+          <h1 className='display-1' ><b>Francisco Funes Alfaro</b></h1>
         </Row>
-        <hr></hr>
-        <Row style={{textAlign:'center'}}>
-          <Col md={6}>
-          <div>
-              <h1 className='display-6' >Software Developer </h1>
-              <h1 className='display-6'>in Lompoc, CA</h1>
-          </div>
-          </Col>
-          <Col md={6}>
-            <div>
-              <h1 className='display-6' >franciscofunes5@gmail.com</h1>
-              <h1 className='display-6' >(805) 452-8446 </h1>
-            </div>
-          </Col>
+        <Row >
+          <h1 className='display-6'>Software Developer </h1>
+        </Row>
+        <Row>
+          <h1 className='display-6'>inquiryfunes@gmail.com</h1>
         </Row>
       </Container>
       </>
