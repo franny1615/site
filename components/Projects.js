@@ -3,7 +3,8 @@ import {React, Component} from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 import ProjectAEM from './ProjectAEM'
 import ProjectNext from './ProjectNext';
-
+import ProjectCOMP420 from './ProjectCOMP420'
+import ProjectCILISP from './ProjectCILISP';
 
 class Projects extends Component {
   constructor() {
@@ -19,6 +20,10 @@ class Projects extends Component {
             </Row>
             <hr></hr>
             <ProjectAEM/>
+            <hr></hr>
+            <ProjectCOMP420/>
+            <hr></hr>
+            <ProjectCILISP/>
             <hr></hr>
             <ProjectNext/>
         </Container>

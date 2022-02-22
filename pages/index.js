@@ -16,9 +16,9 @@ class Home extends Component {
       <Container fluid>
         <BasicInfo/>
         <hr></hr>
-        <Projects/>
-        <hr></hr>
         <Education/>
+        <hr></hr>
+        <Projects/>
       </Container>
       </>
     );
