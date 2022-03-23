@@ -16,7 +16,7 @@ class Education extends Component {
           <Container fluid>
             <Row>
               <Col md={6}>
-                <Image src={schoolImage} width={1017} height={658}/>
+                <Image src={schoolImage} width={1017} height={658} alt="California State University Channel Islands"/>
               </Col>
               <Col md={6} style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <h1 className='display-6'>Computer Science B.S.<br></br>Expected May 2022<br></br>GPA: 3.789</h1>
