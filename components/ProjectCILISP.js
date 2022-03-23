@@ -19,7 +19,7 @@ class ProjectCILISP extends Component {
             </Row>
             <Row style={{margin:'auto', padding:10}}>
                 <Col md={2}>
-                    <Image src={img1} width={200} height={200}/>
+                    <Image src={img1} width={200} height={200} alt="c language"/>
                 </Col>
                 <Col md={10}>
                     <p className='display-6'>As part of the programming languages course, our final project was to implement

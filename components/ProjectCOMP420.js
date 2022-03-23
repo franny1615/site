@@ -35,13 +35,13 @@ class ProjectCOMP420 extends Component {
                         <h1 className='display-6'>Tools Used</h1>
                         <Row style={{textAlign:'center', padding:10}}>
                             <Col md={4}>
-                                <Image src={img1} width={300} height={200}/>
+                                <Image src={img1} width={300} height={200} alt="python"/>
                             </Col>
                             <Col md={4}>
-                                <Image src={img2} width={200} height={200}/>
+                                <Image src={img2} width={200} height={200} alt="javascript"/>
                             </Col>
                             <Col md={4}>
-                                <Image src={img3} width={200} height={200}/>
+                                <Image src={img3} width={200} height={200} alt="html5"/>
                             </Col>
                         </Row>
                     </Container>
@@ -53,19 +53,19 @@ class ProjectCOMP420 extends Component {
             </Row>
             <Row style={{textAlign:'center', padding:10}}>
                 <Col md={6}>
-                    <Image src={screen3} width={1078} height={1103}/>
+                    <Image src={screen3} width={1078} height={1103} alt="screenshot1"/>
                 </Col>
                 
                 <Col md={6}>
-                    <Image src={screen2} width={1078} height={1151}/>
+                    <Image src={screen2} width={1078} height={1151} alt="screenshot2"/>
                 </Col>
             </Row>
             <Row style={{textAlign:'center', padding:10}}>
                 <Col md={6}>
-                    <Image src={screen1} width={1078} height={418}/>
+                    <Image src={screen1} width={1078} height={418} alt="screenshot3"/>
                 </Col>
                 <Col md={6}>
-                    <Image src={screen4} width={1078} height={503}/>
+                    <Image src={screen4} width={1078} height={503} alt="screenshot4"/>
                 </Col>
             </Row>
             <hr></hr>

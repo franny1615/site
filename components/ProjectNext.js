@@ -27,13 +27,13 @@ class ProjectNext extends Component {
                     <h1 className='display-6'>Tools Used</h1>
                     <Row style={{textAlign:'center', padding:10}}>
                       <Col md={4}>
-                          <Image src={img1} width={200} height={119}/>
+                          <Image src={img1} width={200} height={119} alt="next.js"/>
                       </Col>
                       <Col md={4}>
-                          <Image src={img2} width={289} height={135}/>
+                          <Image src={img2} width={289} height={135} alt="react.js"/>
                       </Col>
                       <Col md={4}>
-                          <Image src={img3} width={200} height={166}/>
+                          <Image src={img3} width={200} height={166} alt="bootstrap"/>
                       </Col>
                   </Row>
                   </Container>

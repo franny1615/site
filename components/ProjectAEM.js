@@ -36,18 +36,18 @@ class ProjectAEM extends Component {
                     <Container fluid>
                     <Row>
                         <Col md={6} style={{padding:10}}>
-                            <Image src={androidImage} width={281} height={98}/>
+                            <Image src={androidImage} width={281} height={98} alt="android"/>
                         </Col>
                         <Col md={6} style={{padding:10}}>
-                            <Image src={kotlinImage} width={307} height={81} />
+                            <Image src={kotlinImage} width={307} height={81} alt="kotlin"/>
                         </Col>
                     </Row>
                     <Row>
                         <Col md={6} style={{padding:10}}>
-                            <Image src={sqlImage} width={207} height={109}/>
+                            <Image src={sqlImage} width={207} height={109} alt="sql"/>
                         </Col>
                         <Col md={6} style={{padding:10}}>
-                            <Image src={plaidImage} width={320} height={109}/>
+                            <Image src={plaidImage} width={320} height={109} alt="plaid"/>
                         </Col>
                     </Row>
                     </Container>   
@@ -59,16 +59,16 @@ class ProjectAEM extends Component {
             </Row>
             <Row style={{textAlign:'center', padding:10}}>
                 <Col md={3}>
-                    <Image src={screen1} width={477} height={762}/>
+                    <Image src={screen1} width={477} height={762} alt="screenshot1"/>
                 </Col>
                 <Col md={3}>
-                    <Image src={screen2} width={477} height={762}/>
+                    <Image src={screen2} width={477} height={762} alt="screenshot2"/>
                 </Col>
                 <Col md={3}>
-                    <Image src={screen3} width={477} height={762}/>
+                    <Image src={screen3} width={477} height={762} alt="screenshot3"/>
                 </Col>
                 <Col md={3}>
-                    <Image src={screen4} width={477} height={762}/>
+                    <Image src={screen4} width={477} height={762} alt="screenshot4"/>
                 </Col>
             </Row>
             <hr></hr>
