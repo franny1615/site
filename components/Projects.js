@@ -14,17 +14,10 @@ class Projects extends Component {
   render() {
     return (
       <>
-        <Container style={{background: 'rgba(128, 128, 128, 0.4)', padding:10}} fluid>
-            <Row>
-                <h1 className='display-3'>Projects</h1>
-            </Row>
-            <hr></hr>
+        <Container fluid>
             <ProjectAEM/>
-            <hr></hr>
             <ProjectCOMP420/>
-            <hr></hr>
             <ProjectCILISP/>
-            <hr></hr>
             <ProjectNext/>
         </Container>
       </>

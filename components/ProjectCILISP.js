@@ -13,9 +13,9 @@ class ProjectCILISP extends Component {
   render() {
     return (
       <>
-        <Container style={{padding:10}} fluid>
+        <Container style={{marginTop:10,padding:10, backgroundColor:'rgb(33,37,41)'}} fluid>
             <Row style={{textAlign:'center', padding:10}}>
-                <h1 className='display-5'>Function Based Language CILisp</h1>
+                <h1 className='display-6'>Function Based Language CILisp</h1>
             </Row>
             <Row style={{margin:'auto', padding:10}}>
                 <Col md={2}>
@@ -28,6 +28,7 @@ class ProjectCILISP extends Component {
                     </p>
                 </Col>
             </Row>
+            <hr></hr>
             <Row style={{textAlign:'center'}}>
                 <p  className='display-6'>Check out the code on: <a href="https://github.com/franny1615/CI_LISP">Github</a></p>
             </Row>

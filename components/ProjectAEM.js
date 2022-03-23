@@ -18,24 +18,42 @@ class ProjectAEM extends Component {
   render() {
     return (
       <>
-        <Container style={{padding:10}} fluid>
+        <Container style={{marginTop:10,padding:10, backgroundColor:'rgb(33,37,41)'}} fluid>
             <Row style={{textAlign:'center', padding:10}}>
-                <h1 className='display-5'>Expense Management Application</h1>
+                <Col md={6}>
+                    <hr></hr>
+                    <h1 className='display-6'>
+                        Expense Management Application
+                    </h1>
+                    <h2>
+                        An android application that allows users to link bank accounts, 
+                        poll transaction data, filter out expenses, and visualize those expenses.
+                    </h2>
+                </Col>
+                <Col md={6}>
+                    <hr></hr>
+                    <h1 className='display-6'>Tools Used</h1>
+                    <Container fluid>
+                    <Row>
+                        <Col md={6} style={{padding:10}}>
+                            <Image src={androidImage} width={281} height={98}/>
+                        </Col>
+                        <Col md={6} style={{padding:10}}>
+                            <Image src={kotlinImage} width={307} height={81} />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md={6} style={{padding:10}}>
+                            <Image src={sqlImage} width={207} height={109}/>
+                        </Col>
+                        <Col md={6} style={{padding:10}}>
+                            <Image src={plaidImage} width={320} height={109}/>
+                        </Col>
+                    </Row>
+                    </Container>   
+                </Col>
             </Row>
-            <Row style={{textAlign:'center', padding:10}}>
-                <Col md={3}>
-                    <Image src={androidImage} width={281} height={98}/>
-                </Col>
-                <Col md={3}>
-                    <Image src={kotlinImage} width={307} height={81}/>
-                </Col>
-                <Col md={3}>
-                    <Image src={sqlImage} width={207} height={109}/>
-                </Col>
-                <Col md={3}>
-                    <Image src={plaidImage} width={320} height={109}/>
-                </Col>
-            </Row>
+            <hr></hr>
             <Row style={{textAlign:'center', padding:10}}>
                 <h1 className='display-6'>Screenshots</h1>
             </Row>
@@ -53,6 +71,7 @@ class ProjectAEM extends Component {
                     <Image src={screen4} width={477} height={762}/>
                 </Col>
             </Row>
+            <hr></hr>
             <Row style={{textAlign:'center'}}>
                 <p  className='display-6'>Check out the code on: <a href="https://github.com/franny1615/capstone_kotlin">Github</a></p>
             </Row>

@@ -17,21 +17,37 @@ class ProjectCOMP420 extends Component {
   render() {
     return (
       <>
-        <Container style={{padding:10}} fluid>
+        <Container style={{marginTop:10,padding:10, backgroundColor:'rgb(33,37,41)'}} fluid>
             <Row style={{textAlign:'center', padding:10}}>
-                <h1 className='display-5'>AWS Database Viewer WebApp</h1>
+                <Col md={6}>
+                    <hr></hr>
+                    <h1 className='display-6'>AWS Database Viewer WebApp</h1>
+                    <h2>
+                        As part of a databases course, we were tasked to create an application
+                        that allows a user to see data within a SQL database running off an AWS server.
+                        I choose to create something akin to PhPMyAdmin with a little bit of style using 
+                        bootstrap.
+                    </h2>
+                </Col>
+                <Col md={6}>
+                    <hr></hr>
+                    <Container fluid>
+                        <h1 className='display-6'>Tools Used</h1>
+                        <Row style={{textAlign:'center', padding:10}}>
+                            <Col md={4}>
+                                <Image src={img1} width={300} height={200}/>
+                            </Col>
+                            <Col md={4}>
+                                <Image src={img2} width={200} height={200}/>
+                            </Col>
+                            <Col md={4}>
+                                <Image src={img3} width={200} height={200}/>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Col>
             </Row>
-            <Row style={{textAlign:'center', padding:10}}>
-                <Col md={4}>
-                    <Image src={img1} width={300} height={200}/>
-                </Col>
-                <Col md={4}>
-                    <Image src={img2} width={200} height={200}/>
-                </Col>
-                <Col md={4}>
-                    <Image src={img3} width={200} height={200}/>
-                </Col>
-            </Row>
+            <hr></hr>
             <Row style={{textAlign:'center', padding:10}}>
                 <h1 className='display-6'>Screenshots</h1>
             </Row>
@@ -52,6 +68,7 @@ class ProjectCOMP420 extends Component {
                     <Image src={screen4} width={1078} height={503}/>
                 </Col>
             </Row>
+            <hr></hr>
             <Row style={{textAlign:'center'}}>
                 <p  className='display-6'>Check out the code on: <a href="https://github.com/franny1615/COMP420_LAB10/tree/main">Github</a></p>
             </Row>
