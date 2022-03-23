@@ -23,7 +23,7 @@ class BasicInfo extends Component {
           </Col>
           <Col md={6} style={{padding:'10px'}}>
             <h1 className='display-6'>
-              I'm primarily an Android Developer using native tools such as Android Studio and the Kotlin programming language.
+              I am primarily an Android Developer using native tools such as Android Studio and the Kotlin programming language.
               <br></br>
               <br></br>
               I also flirt a little with frontend web development using Next.js and React.js libraries to power web applications.
