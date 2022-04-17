@@ -63,7 +63,7 @@ class CapstonePage extends Component {
                             <h4>Demo</h4>
                         </Row>
                         <Row style={{marginLeft:30,marginRight:30}}>
-                        <iframe width="540" height="960" src="https://www.youtube.com/embed/hf_6s0jp4QQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="540" height="960" src="https://www.youtube.com/embed/hf_6s0jp4QQ" title="YouTube video player"></iframe>
                         </Row>
                     </Container>
                 </Row>
