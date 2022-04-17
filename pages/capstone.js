@@ -111,15 +111,15 @@ class CapstonePage extends Component {
                                     asynchronously to fetch, store, delete, or update Model components. These instructions are called from the DAO.
                                     <br></br>
                                     <br></br>
-                                    Model components are another Kotlin class that use annotations that tell Android's Room database
+                                    Model components are another Kotlin class that use annotations that tell Androids Room database
                                     that they represent data that can be stored. 
                                     <br></br>
                                     <br></br>
                                     The DAO is a Data Access Object, a Kotlin interface that defines the types of actions we want to 
-                                    perform on the database itself, these get converted into SQL instructions by Android's Room layer. 
+                                    perform on the database itself, these get converted into SQL instructions by Androids Room layer. 
                                     <br></br>
                                     <br></br>
-                                    Lastly, the Database is a Kotlin file that tell Android's Room to make an instance of a Room Database.
+                                    Lastly, the Database is a Kotlin file that tell Androids Room to make an instance of a Room Database.
                                     Which is effectively a SQLite Database, but with error checking at compile time for both Kotlin code and
                                     SQLite queries.  
                                 </h5>
@@ -216,34 +216,34 @@ class CapstonePage extends Component {
                                 <br></br>
                                 Theme:
                                 <ul>
-                                    <li>implementation 'com.google.android.material:material:1.5.0'</li>
-                                    <li>implementation 'androidx.cardview:cardview:1.0.0'</li>
+                                    <li>{"implementation 'com.google.android.material:material:1.5.0'"}</li>
+                                    <li>{"implementation 'androidx.cardview:cardview:1.0.0'"}</li>
                                 </ul>
                                 Networking:
                                 <ul>
-                                    <li>implementation 'com.android.volley:volley:1.2.1'</li>
+                                    <li>{"implementation 'com.android.volley:volley:1.2.1'"}</li>
                                 </ul>
                                 Plaid API SDK:
                                 <ul>
-                                    <li>implementation 'com.plaid.link:sdk-core:3.6.1-rc.2'</li>
+                                    <li>{"implementation 'com.plaid.link:sdk-core:3.6.1-rc.2'"}</li>
                                 </ul>
                                 Charting Library:
                                 <ul>
-                                    <li>implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'</li>
+                                    <li>{"implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'"}</li>
                                 </ul>
                                 Room Database:
                                 <ul>
-                                    <li>implementation "androidx.room:room-ktx:2.4.2"</li>
-                                    <li>kapt "androidx.room:room-compiler:2.4.2"</li>
-                                    <li>implementation "androidx.room:room-runtime:2.4.2"</li>
-                                    <li>annotationProcessor "androidx.room:room-compiler:2.4.2"</li>
+                                    <li>{"implementation 'androidx.room:room-ktx:2.4.2'"}</li>
+                                    <li>{"kapt 'androidx.room:room-compiler:2.4.2'"}</li>
+                                    <li>{"implementation 'androidx.room:room-runtime:2.4.2'"}</li>
+                                    <li>{"annotationProcessor 'androidx.room:room-compiler:2.4.2'"}</li>
                                 </ul>
                                 <br></br>
                                 The following plugin was added in order to use the kapt annotation seen above.
                                 Plugins are located at top of the build.gradle file.
                                 <br></br> 
                                 <ul>
-                                    <li>id 'kotlin-kapt'</li>
+                                    <li>{"id 'kotlin-kapt'"}</li>
                                 </ul>
                                 <br></br>
                                 The files in question should be located under Gradle Scripts as seen below:
@@ -262,11 +262,11 @@ class CapstonePage extends Component {
                                 <a href='https://github.com/plaid/quickstart' target="_blank">Quickstart</a>
                                 <br></br>
                                 <br></br>
-                                That's it! Once these three are set up and ready to go, it is a matter of putting it all together. 
+                                {"That's"} it! Once these three are set up and ready to go, it is a matter of putting it all together. 
                                 Some tips to make the process easier if trying it for yourself, use tools like Postman to test your backend utility, once you 
                                 know it works then begin trying to link it to your application. Then when making the plaid calls in the app
                                 it might help to place the call somewhere where the it will get called everytime the screen launches, otherwise
-                                you might run into bugs where it seemingly works, but the response isn't stored anywhere. 
+                                you might run into bugs where it seemingly works, but the response {"isn't"} stored anywhere. 
                                 <br></br>
                                 <br></br>
                                 There are going to be other obstacles but to each there own, good luck!
@@ -288,12 +288,12 @@ class CapstonePage extends Component {
                             <h4>
                                 As mentioned in the academic poster, I managed to get this application working 
                                 in 60 days worth of time. This includes the learning of some concepts about Room,
-                                the Android Framework, XML, etc. However this doesn't include past programming 
+                                the Android Framework, XML, etc. However this {"doesn't"} include past programming 
                                 experience, the SQL course I have under my belt, and other courses that helped 
                                 make the project doable in such a short time frame. 
                                 <br></br>
                                 <br></br>
-                                That doesn't mean you need a Bachelors degree to make such applications, with some
+                                That {"doesn't"} mean you need a Bachelors degree to make such applications, with some
                                 time everyday learning key concepts about programming in Kotlin, SQL fundamentals,
                                 and a little bit of networking, in 6 months worth of time spread throughout a year
                                 could produce a working application. 
