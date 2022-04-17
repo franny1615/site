@@ -32,7 +32,7 @@ class CapstonePage extends Component {
     render() {
         return (
             <>
-            <Container fluid>
+            <Container style={{overflowX:'hidden'}} fluid>
                 <Row style={{textAlign:'center'}}>
                     <h1 className="display-5">Alpha Expense Management</h1>    
                     <h5>by Fictious Alpha Technologies Inc.</h5>
