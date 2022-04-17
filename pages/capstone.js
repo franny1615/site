@@ -208,7 +208,7 @@ class CapstonePage extends Component {
                         <Row style={{justifyContent:'center', marginLeft:30,marginRight:30}}>
                             <h4>
                                 The application was primarily developed on the Android Studio IDE which is provided free of charge
-                                at: <a href='https://developer.android.com/studio' target="_blank">here</a>.
+                                at: <a href='https://developer.android.com/studio' target="_blank" rel="noreferrer">here</a>.
                                 <br></br>
                                 <br></br>
                                 Once an empty activity project is set up, the following dependencies were added to the build.gradle file:
@@ -254,12 +254,12 @@ class CapstonePage extends Component {
                                 <br></br>
                                 <br></br>
                                 The next tool used was the Plaid API, and to set this up follow the instructions of their website: 
-                                <a href='https://plaid.com/docs/quickstart/' target="_blank">Plaid Inc.</a>
+                                <a href='https://plaid.com/docs/quickstart/' target="_blank" rel="noreferrer">Plaid Inc.</a>
                                 <br></br>
                                 <br></br>
                                 Lastly, a backend utility needs to be created to run request to the API and feed results back to our app.
                                 This was taken from the Plaid Quickstart Github and modified for this project. The project is located here:
-                                <a href='https://github.com/plaid/quickstart' target="_blank">Quickstart</a>
+                                <a href='https://github.com/plaid/quickstart' target="_blank" rel="noreferrer">Quickstart</a>
                                 <br></br>
                                 <br></br>
                                 {"That's"} it! Once these three are set up and ready to go, it is a matter of putting it all together. 
@@ -272,8 +272,8 @@ class CapstonePage extends Component {
                                 There are going to be other obstacles but to each there own, good luck!
                             </h4>
                             <h4 style={{textAlign:'center'}}>
-                                <a href='https://github.com/franny1615/capstone_kotlin' target="_blank">App Repo</a>  
-                                --<a href='https://github.com/franny1615/cap_backend' target="_blank">Backend Repo</a>
+                                <a href='https://github.com/franny1615/capstone_kotlin' target="_blank" rel="noreferrer">App Repo</a>  
+                                --<a href='https://github.com/franny1615/cap_backend' target="_blank" rel="noreferrer">Backend Repo</a>
                             </h4>
                         </Row>
                     </Container>
