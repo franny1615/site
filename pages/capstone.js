@@ -10,6 +10,7 @@ import DAOExample from '../public/accountsDAO.png'
 import DBExample from '../public/appDatabase.png'
 import NetworkingExample from '../public/networkingHelper.png'
 import MenuBar from '../public/menuBarAndroid.png'
+import Comments from '../components/Comments'
 
 class CapstonePage extends Component {
     constructor() {
@@ -320,6 +321,16 @@ class CapstonePage extends Component {
                             </h4>
                         </Row>
                         <hr></hr>
+                    </Container>
+                </Row>
+                <Row>
+                    <Container fluid>
+                        <Row>
+                            <h4>Comments</h4>
+                        </Row>
+                        <Row style={{marginLeft:30,marginRight:30}}>
+                            <Comments style={{width:'100%'}} />
+                        </Row>
                     </Container>
                 </Row>
             </Container>
