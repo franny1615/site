@@ -14,7 +14,7 @@ export default class Comments extends Component {
         scriptEl.setAttribute("crossorigin", "anonymous");
         scriptEl.setAttribute("async", true);
         scriptEl.setAttribute("repo", "franny1615/capstone_comments"); 
-        scriptEl.setAttribute("issue-term", "title"); 
+        scriptEl.setAttribute("issue-number", "2"); 
         this.commentBox.current.appendChild(scriptEl);
     }
 
