@@ -22,7 +22,7 @@ export default class Comments extends Component {
 
     getAllComments = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/request', {
+            const response = await fetch('https://www.franciscofunes.com/api/request', {
                 method: 'GET',
             });
             const json = await response.json()
@@ -42,7 +42,7 @@ export default class Comments extends Component {
     postAComment = async () => {
         try {
             console.log('here')
-            await fetch('http://localhost:3000/api/request', {
+            await fetch('https://www.franciscofunes.com/api/request', {
                 method: 'POST',
                 body: JSON.stringify({
                     comment:this.state.comment,
