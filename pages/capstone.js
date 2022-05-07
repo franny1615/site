@@ -324,14 +324,7 @@ class CapstonePage extends Component {
                     </Container>
                 </Row>
                 <Row>
-                    <Container fluid>
-                        <Row>
-                            <h4>Comments</h4>
-                        </Row>
-                        <Row style={{marginLeft:30,marginRight:30}}>
-                            <Comments style={{width:'100%'}} />
-                        </Row>
-                    </Container>
+                    <Comments />
                 </Row>
             </Container>
             </>
