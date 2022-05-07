@@ -17,6 +17,7 @@ export default class Comments extends Component {
 
     onSubmit = (e) => {
         e.preventDefault()
+        document.getElementById("commentTextBox").value = ""
         this.postAComment()
     }
 
@@ -92,10 +93,10 @@ export default class Comments extends Component {
                 </Row>
                 <Row style={{marginRight:30,marginLeft:30, marginBottom:30}}>
                     <Form>
-                        <Form.Group className="mb-3" controlId="commentForm">
+                        <Form.Group className="mb-3">
                             <Form.Label>Enter your comment below:</Form.Label>
-                            <Form.Control as="textarea" rows="3" placeholder="" onChange={e => this.setState({ comment : e.target.value })}/>
-                            <Form.Text className="text-muted" >
+                            <Form.Control as="textarea" rows="3" id="commentTextBox" placeholder="" onChange={e => this.setState({ comment : e.target.value })}/>
+                            <Form.Text className="text-muted">
                                 Please keep conversation family friendly. Thank you!
                             </Form.Text>
                         </Form.Group>
