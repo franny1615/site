@@ -18,7 +18,7 @@ async function getAllComments(request, response) {
     try {
         let { db } = await connectToDatabase();
 
-        let comments = await db.collection('comments').find({}).toArray()
+        let comments = await db.collection('comments').find({}).sort({timestamp: -1}).toArray()
 
         return response.json(
             {
@@ -35,8 +35,7 @@ async function postAComment(request, response) {
     try {
         let { db } = await connectToDatabase();
 
-        console.log('here again')
-        await db.collection('comments').inserOne(JSON.parse(req.body))
+        await db.collection('comments').insertOne(JSON.parse(request.body))
 
         return response.json(
             {

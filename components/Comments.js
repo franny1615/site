@@ -9,7 +9,10 @@ export default class Comments extends Component {
     }
 
     componentDidMount () {
-        this.getAllComments()
+        const MINUTE_MS = 1000
+        const interval = setInterval(() => {
+            this.getAllComments()
+        }, MINUTE_MS);
     }
 
     onSubmit = (e) => {
@@ -27,7 +30,8 @@ export default class Comments extends Component {
             for(var i in json['message']) {
                 let id = json['message'][i]['_id']
                 let comment = json['message'][i]['comment']
-                comments.push([id,comment])
+                let timeStamp = json['message'][i]['timestamp']
+                comments.push([id,comment,timeStamp])
             }
             this.setState({comments: comments})
         } catch (error) {
@@ -40,11 +44,26 @@ export default class Comments extends Component {
             console.log('here')
             await fetch('http://localhost:3000/api/request', {
                 method: 'POST',
-                body: {comment:this.state.comment},
+                body: JSON.stringify({
+                    comment:this.state.comment,
+                    timestamp:this.getFormattedDate()
+                }),
             });
         } catch (error) {
             console.log(error)
         }
+    }
+
+    getFormattedDate = () => {
+        var d = new Date();
+    
+        d = d.getFullYear() + "-" + 
+            ('0' + (d.getMonth() + 1)).slice(-2) + 
+            "-" + ('0' + d.getDate()).slice(-2) + " " + 
+            ('0' + d.getHours()).slice(-2) + ":" + 
+            ('0' + d.getMinutes()).slice(-2);
+    
+        return d;
     }
 
     render() { 
@@ -52,11 +71,16 @@ export default class Comments extends Component {
 
         const commentRows = []
 
-        for(const [id, comment] of comments) {
+        for(const [id, comment, timestamp] of comments) {
             commentRows.push(
                 <Row key={id}>
                     <hr></hr>
-                    <h4>{comment}</h4>
+                    <Col md={8}>
+                        <h4 style={{textAlign:'start'}}>{comment}</h4>
+                    </Col>
+                    <Col md={4}>
+                        <h4 class="text-muted" style={{textAlign:'end'}}>{timestamp}</h4>
+                    </Col>
                 </Row>
             )
         }
