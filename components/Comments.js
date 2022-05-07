@@ -79,7 +79,7 @@ export default class Comments extends Component {
                         <h4 style={{textAlign:'start'}}>{comment}</h4>
                     </Col>
                     <Col md={4}>
-                        <h4 class="text-muted" style={{textAlign:'end'}}>{timestamp}</h4>
+                        <h4 className="text-muted" style={{textAlign:'end'}}>{timestamp}</h4>
                     </Col>
                 </Row>
             )
