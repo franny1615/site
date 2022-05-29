@@ -15,7 +15,7 @@ export default function Contact() {
                                     <b>Email:</b>
                                 </Col>
                                 <Col md={10}>
-                                    iniquiryfunes@gmail.com
+                                    inquiryfunes@gmail.com
                                 </Col>
                             </Row>
                             <Row>
