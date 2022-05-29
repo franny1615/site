@@ -16,7 +16,7 @@ export default function ProjectPanel() {
                             <h4>F1 Calendar App</h4>
                         </Row>
                         <Row style={{marginBottom:5}}>
-                            <a className='d-flex justify-content-center' href="https://github.com/franny1615/F1CalendarApp">
+                            <a className='d-flex justify-content-center' href="https://github.com/franny1615/F1CalendarApp" target="_blank">
                                 <img src="/logos/githubIcon.png" alt="Github" width={30} height={30}/>
                             </a>
                         </Row>
@@ -31,7 +31,7 @@ export default function ProjectPanel() {
                             <h4>Expense Management App</h4>
                         </Row>
                         <Row style={{marginBottom:5}}>
-                            <a className='d-flex justify-content-center' href="https://github.com/franny1615/capstone_kotlin">
+                            <a className='d-flex justify-content-center' href="https://github.com/franny1615/capstone_kotlin" target="_blank">
                                 <img src="/logos/githubIcon.png" alt="Github" width={30} height={30}/>
                             </a>
                         </Row>
