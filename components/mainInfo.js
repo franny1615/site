@@ -16,5 +16,3 @@ export default function MainInfo() {
         </Container>
     )
 }
-// TODO: add the resume and capstone links in the about me
-// TODO: well... redo the rest of the tabs in the new style
