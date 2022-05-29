@@ -1,8 +1,8 @@
 import {React, Component} from 'react'
 import {Container} from 'react-bootstrap'
 
-export default function Education() {
+export default function Resume() {
     return (
-        <h1>Education Page</h1>
+        <h1>Resume Page</h1>
     )
 }
