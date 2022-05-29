@@ -17,7 +17,7 @@ export default function NavigationBar() {
                   <Image src={MyLogo} width={194} height={200}/>
                 </Nav.Link>
                 <Nav.Link href="/resume"><h3>Resume</h3></Nav.Link>
-                <Nav.Link href="/employment"><h3>Employment</h3></Nav.Link>
+                <Nav.Link href="/contact"><h3>Contact</h3></Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Container>
