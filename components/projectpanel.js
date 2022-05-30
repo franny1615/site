@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import f1AppImg from '../public/f1calendarapp/main.png'
 import expenseAppImg from '../public/capstone/appScreenShots/accounts-pop.png'
+import GitHubIcon from '../public/logos/githubIcon.png'
 import {Container, Row, Col} from 'react-bootstrap'
 
 export default function ProjectPanel() {
@@ -17,7 +18,7 @@ export default function ProjectPanel() {
                         </Row>
                         <Row style={{marginBottom:5}}>
                             <a className='d-flex justify-content-center' href="https://github.com/franny1615/F1CalendarApp" target="_blank" rel="noreferrer">
-                                <img src="/logos/githubIcon.png" alt="Github" width={30} height={30}/>
+                                <Image width={30} height={30} src={GitHubIcon} alt="Github"/>
                             </a>
                         </Row>
                         <Row className='d-flex justify-content-center' style={{height:'90%'}}>
@@ -32,7 +33,7 @@ export default function ProjectPanel() {
                         </Row>
                         <Row style={{marginBottom:5}}>
                             <a className='d-flex justify-content-center' href="https://github.com/franny1615/capstone_kotlin" target="_blank" rel="noreferrer">
-                                <img src="/logos/githubIcon.png" alt="Github" width={30} height={30}/>
+                                <Image width={30} height={30} src={GitHubIcon} alt="Github"/>
                             </a>
                         </Row>
                         <Row className='d-flex justify-content-center' style={{height:'90%'}}>
@@ -40,6 +41,12 @@ export default function ProjectPanel() {
                         </Row>
                     </Container>
                 </Col>
+            </Row>
+            <Row style={{textAlign:'center'}}>
+                <h4>This Website</h4>
+                <a className='d-flex justify-content-center' href="https://github.com/franny1615/site" target="_blank" rel="noreferrer">
+                    <Image width={30} height={30} src={GitHubIcon} alt="Github"/>
+                </a>
             </Row>
         </Container>
     )
