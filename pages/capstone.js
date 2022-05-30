@@ -1,138 +1,153 @@
-import {React, Component, createRef} from 'react'
+import {React} from 'react'
 import {Container, Row, Col, Button} from 'react-bootstrap'
-import NextImage from 'next/image'
-import Poster from '../public/Poster.png'
-import AppFlow from '../public/AEMFlow.svg'
-import ViewExample from '../public/ViewMakeUp.svg'
-import ViewModelExample from '../public/accountsVM.png'
-import ModelExample from '../public/accountsModel.png'
-import DAOExample from '../public/accountsDAO.png'
-import DBExample from '../public/appDatabase.png'
-import NetworkingExample from '../public/networkingHelper.png'
-import MenuBar from '../public/menuBarAndroid.png'
-import Comments from '../components/Comments'
+import Image from 'next/image'
+import AccountsScreenshot from '../public/capstone/appScreenShots/accounts-pop.png'
+import TransacsScreenshot from '../public/capstone/appScreenShots/transactions-populated.png'
+import ExpensesScreenshot from '../public/capstone/appScreenShots/expenses-pop.png'
+import AnalysisScreenshot from '../public/capstone/appScreenShots/analysis-pop.png'
+import AppFlow from '../public/capstone/diagrams/AEMFlow.svg'
+import GitHubIcon from '../public/logos/githubIcon.png'
+import AcademicPoster from '../public/capstone/diagrams/Poster.png'
+import ViewExample from '../public/capstone/diagrams/ViewMakeUp.svg'
+import ViewModelExample from '../public/capstone/code/accountsVM.png'
+import ModelExample from '../public/capstone/code/accountsModel.png'
+import DAOExample from '../public/capstone/code/accountsDAO.png'
+import DBExample from '../public/capstone/code/appDatabase.png'
+import NetworkingExample from '../public/capstone/code/networkingHelper.png'
+import MenuBar from '../public/capstone/code/menuBarAndroid.png'
 
-class CapstonePage extends Component {
-    constructor() {
-        super();
-    }
-
-    downloadPDF = () => {
-        fetch('/Poster.pdf')
-            .then(response => {
-                response.blob().then(blob => {
-                    let url = window.URL.createObjectURL(blob);
-                    let a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'Poster.pdf';
-                    a.click();
-                });
+export default function Capstone() {
+    const downloadPoster = event => {
+        event.preventDefault()
+        fetch('/capstone/diagrams/Poster.pdf')
+        .then(response => {
+            response.blob().then(blob => {
+                let url = window.URL.createObjectURL(blob);
+                let a = document.createElement('a');
+                a.href = url;
+                a.download = 'Poster.pdf';
+                a.click();
+            });
         });
     }
 
-    render() {
-        return (
-            <>
-            <Container style={{overflowX:'hidden'}} fluid>
-                <Row style={{textAlign:'center'}}>
-                    <h1 className="display-5">Alpha Expense Management</h1>    
-                    <h5>by Fictious Alpha Technologies Inc.</h5>
-                </Row>
-                <hr></hr>
-                <Row>
+    return (
+        <Container style={{overflow:'hidden'}} fluid>
+            <Row>
+                <Container style={{textAlign:'center', marginTop:10}} fluid>
+                    <Row><h1>Expense Management</h1></Row>
+                    <Row><h6>by Fictitious Alpha Technologies, Inc.</h6></Row>
+                </Container>
+            </Row>
+            <Row>
+                <Col style={{marginTop:10}} md={6}>
                     <Container fluid>
-                        <Row>
-                            <h4>The Pitch</h4>
-                        </Row>
-                        <Row style={{marginLeft:'30px',marginRight:'30px'}}>
-                            <h5>
+                        <Row><h4><u>Pitch</u></h4></Row>
+                        <Row className='d-flex align-items-center'>
+                            <h6 style={{textAlign:'justify', margin:0}}>
                                 Have you ever wondered how applications such as Venmo or CashApp work?
-                                How difficult it is to create them? And whether or not you, could develop one?
+                                How difficult it is to create them? And whether or not <b>you</b>, could develop one?
                                 <br></br>
                                 <br></br>
                                 Wonder no longer as this project shows that not only is it possible
                                 to develop these types of apps quickly. But the knowledge required
-                                is not too large, and the tools are readibly available to begin. 
-                            </h5>
+                                is not too large, and the tools are readibly available to begin.
+                            </h6>
+                        </Row>
+                        <Row style={{marginTop:30}}>
+                            <div style={{width:'fit-content'}}>
+                            <a className='d-flex align-items-center' style={{textDecoration:'none'}} href="https://github.com/franny1615/capstone_kotlin" target="_blank" rel="noreferrer">
+                                <Image margin={10} width={30} height={30} src={GitHubIcon} alt="Github"/> 
+                                &nbsp;Product Github
+                            </a>
+                            </div>
                         </Row>
                     </Container>
-                </Row>
-                <hr></hr>
-                <Row>
+                </Col>
+                <Col style={{marginTop:10}} md={6}>
                     <Container fluid>
+                        <Row><h4><u>Product Screenshots</u></h4></Row>
                         <Row>
-                            <h4>Demo</h4>
-                        </Row>
-                        <Row style={{marginLeft:30,marginRight:30}}>
-                            <iframe width={540} height={960} src="https://www.youtube.com/embed/9GrXTOI26k8" title="Youtube Video Player" allow="fullscreen" frameBorder="0"></iframe>
+                            <Col md={3}><Image src={AccountsScreenshot} alt="App Screenshot"/></Col>
+                            <Col md={3}><Image src={TransacsScreenshot} alt="App Screenshot"/></Col>
+                            <Col md={3}><Image src={ExpensesScreenshot} alt="App Screenshot"/></Col>
+                            <Col md={3}><Image src={AnalysisScreenshot} alt="App Screenshot"/></Col>
                         </Row>
                     </Container>
-                </Row>
-                <hr></hr>
-                <Row>
+                </Col>
+            </Row>
+            <Row>
+                <Container style={{marginTop:10}} fluid>
+                    <Row style={{textAlign:'center'}}><h4><u>Demo</u></h4></Row>
+                    <Row className='d-flex justify-content-center'>
+                        <iframe className="capstone" src="https://www.youtube.com/embed/9GrXTOI26k8" title="Youtube Video Player" allow="fullscreen" frameBorder="0"></iframe>
+                    </Row>
+                </Container>
+            </Row>
+            <Row>
+                <Container style={{marginTop:10, paddingLeft:100, paddingRight:100}} fluid>
+                    <Row style={{textAlign:'center'}}><h4><u>Academic Poster</u></h4></Row>
+                    <Row>
+                        <Image src={AcademicPoster} width={2500} height={1875}/>
+                    </Row>
+                    <Row className='d-flex justify-content-center' style={{margin:10}}>
+                        <Button onClick={downloadPoster} style={{width:'60%'}}>Download</Button>
+                    </Row>
+                </Container>
+            </Row>
+            <Row>
+                <Container fluid>
+                    <Row>
+                        <h4><u>App Architecture</u></h4>
+                    </Row>
+                    <Row style={{marginLeft:30,marginRight:30}}>
+                        <Col md={6} style={{display:'flex',
+                                            justifyContent:'center',
+                                            alignItems:'center', 
+                                            backgroundColor:'rgb(152, 155, 158)', 
+                                            borderRadius:30,
+                                            paddingTop:50,
+                                            paddingBottom:50}}>
+                            <Image src={AppFlow} alt="app architecture"/>
+                        </Col>
+                        <Col md={6} className='d-flex align-items-center justify-content-center'>
+                            <h6>
+                                Shown in the diagram is the application architecture. 
+                                The View Viewmodel Model paradigm was used as this 
+                                is what Google supports in their Android framework.
+                                <br></br> 
+                                <br></br>
+                                There is a main view which handles the navigation logic,
+                                and contains a fragment manager which displays the different views
+                                based on user navigation inputs. 
+                                <br></br>
+                                <br></br>
+                                Then there is the views themselves, each view has an XML and Kotlin file
+                                which make up its logic and User Interface.
+                                <br></br>
+                                <br></br>
+                                These views then work with a Viewmodel, which is another Kotlin file, and this file works with the database
+                                asynchronously to fetch, store, delete, or update Model components. These instructions are called from the DAO.
+                                <br></br>
+                                <br></br>
+                                Model components are another Kotlin class that use annotations that tell Androids Room database
+                                that they represent data that can be stored. 
+                                <br></br>
+                                <br></br>
+                                The DAO is a Data Access Object, a Kotlin interface that defines the types of actions we want to 
+                                perform on the database itself, these get converted into SQL instructions by Androids Room layer. 
+                                <br></br>
+                                <br></br>
+                                Lastly, the Database is a Kotlin file that tell Androids Room to make an instance of a Room Database.
+                                Which is effectively a SQLite Database, but with error checking at compile time for both Kotlin code and
+                                SQLite queries.  
+                            </h6>
+                        </Col>
+                    </Row>
+                    <Row>
                     <Container fluid>
-                        <Row>
-                            <h4>Academic Poster</h4>
-                        </Row>
-                        <Row style={{marginLeft:30,marginRight:30}}>
-                            <NextImage src={Poster} width={2500} height={1875} alt="poster"/>
-                        </Row>
-                        <Row style={{marginLeft:50,marginRight:50,marginTop:10}}>
-                            <Button onClick={this.downloadPDF}>Download as PDF</Button>
-                        </Row>
-                    </Container>
-                </Row>
-                <hr></hr>
-                <Row>
-                    <Container fluid>
-                        <Row>
-                            <h4>App Architecture</h4>
-                        </Row>
-                        <Row style={{marginLeft:30,marginRight:30}}>
-                            <Col md={6} style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-                                <NextImage src={AppFlow} alt="app architecture"/>
-                            </Col>
-                            <Col md={6}>
-                                <h5>
-                                    Shown in the diagram is the application architecture. 
-                                    The View Viewmodel Model paradigm was used as this 
-                                    is what Google supports in their Android framework.
-                                    <br></br> 
-                                    <br></br>
-                                    There is a main view which handles the navigation logic,
-                                    and contains a fragment manager which displays the different views
-                                    based on user navigation inputs. 
-                                    <br></br>
-                                    <br></br>
-                                    Then there is the views themselves, each view has an XML and Kotlin file
-                                    which make up its logic and User Interface.
-                                    <br></br>
-                                    <br></br>
-                                    These views then work with a Viewmodel, which is another Kotlin file, and this file works with the database
-                                    asynchronously to fetch, store, delete, or update Model components. These instructions are called from the DAO.
-                                    <br></br>
-                                    <br></br>
-                                    Model components are another Kotlin class that use annotations that tell Androids Room database
-                                    that they represent data that can be stored. 
-                                    <br></br>
-                                    <br></br>
-                                    The DAO is a Data Access Object, a Kotlin interface that defines the types of actions we want to 
-                                    perform on the database itself, these get converted into SQL instructions by Androids Room layer. 
-                                    <br></br>
-                                    <br></br>
-                                    Lastly, the Database is a Kotlin file that tell Androids Room to make an instance of a Room Database.
-                                    Which is effectively a SQLite Database, but with error checking at compile time for both Kotlin code and
-                                    SQLite queries.  
-                                </h5>
-                            </Col>
-                        </Row>
-                    </Container>
-                </Row>
-                <hr></hr>
-                <Row>
-                    <Container fluid>
-                        <Row>
-                            <h4>Example Code</h4>
+                        <Row style={{marginTop:10}}>
+                            <h4><u>Example Code</u></h4>
                         </Row>
                         <Row style={{justifyContent:'center'}}>
                             <Col md={6}>
@@ -141,7 +156,7 @@ class CapstonePage extends Component {
                                         <h5>View Breakdown</h5>
                                     </Row>
                                     <Row>
-                                        <NextImage src={ViewExample} alt="view breakdown"/>
+                                        <Image src={ViewExample} alt="view breakdown"/>
                                     </Row>
                                 </Container>
                             </Col>
@@ -151,7 +166,7 @@ class CapstonePage extends Component {
                                         <h5>ViewModel</h5>
                                     </Row>
                                     <Row>
-                                        <NextImage src={ViewModelExample} alt="view breakdown"/>
+                                        <Image src={ViewModelExample} alt="view breakdown"/>
                                     </Row>
                                 </Container>
                             </Col>
@@ -163,7 +178,7 @@ class CapstonePage extends Component {
                                         <h5>Model</h5>
                                     </Row>
                                     <Row>
-                                        <NextImage src={ModelExample} alt="view breakdown"/>
+                                        <Image src={ModelExample} alt="view breakdown"/>
                                     </Row>
                                 </Container>
                             </Col>
@@ -173,7 +188,7 @@ class CapstonePage extends Component {
                                         <h5>DAO</h5>
                                     </Row>
                                     <Row>
-                                        <NextImage src={DAOExample} alt="view breakdown"/>
+                                        <Image src={DAOExample} alt="view breakdown"/>
                                     </Row>
                                 </Container>
                             </Col>
@@ -183,8 +198,8 @@ class CapstonePage extends Component {
                                 <Row style={{textAlign:'center'}}>
                                     <h5>Database</h5>
                                 </Row>
-                                <Row style={{justifyContent:'center'}}>
-                                    <NextImage src={DBExample} alt="view breakdown"/>
+                                <Row className='d-flex justify-content-center'>
+                                    <Image src={DBExample} alt="view breakdown"/>
                                 </Row>
                             </Container>
                         </Row>
@@ -193,23 +208,20 @@ class CapstonePage extends Component {
                                 <Row style={{textAlign:'center'}}>
                                     <h5>Networking Helper</h5>
                                 </Row>
-                                <Row style={{justifyContent:'center'}}>
-                                    <NextImage src={NetworkingExample} alt="view breakdown"/>
+                                <Row className='d-flex justify-content-center'>
+                                    <Image src={NetworkingExample} alt="view breakdown"/>
                                 </Row>
                             </Container>
                         </Row>
                     </Container>
                 </Row>
-                <hr></hr>
                 <Row>
                     <Container fluid>
-                        <Row>
-                            <h4>Tools Used</h4>
-                        </Row>
+                        <Row style={{marginTop:10}}><h4><u>Tools Used</u></h4></Row>
                         <Row style={{justifyContent:'center', marginLeft:30,marginRight:30}}>
-                            <h4>
+                            <h6>
                                 The application was primarily developed on the Android Studio IDE which is provided free of charge
-                                at: <a href='https://developer.android.com/studio' target="_blank" rel="noreferrer">here</a>.
+                                at: <a href='https://developer.android.com/studio' style={{textDecoration:'none'}} target="_blank" rel="noreferrer">here</a>.
                                 <br></br>
                                 <br></br>
                                 Once an empty activity project is set up, the following dependencies were added to the build.gradle file:
@@ -248,19 +260,19 @@ class CapstonePage extends Component {
                                 </ul>
                                 <br></br>
                                 The files in question should be located under Gradle Scripts as seen below:
-                            </h4>
-                            <NextImage src={MenuBar} alt="location picture"/>
-                            <h4>
+                            </h6>
+                            <Image src={MenuBar} alt="location picture"/>
+                            <h6>
                                 Once that has been set up, the Android Studio IDE is ready for development of this type of app.
                                 <br></br>
                                 <br></br>
                                 The next tool used was the Plaid API, and to set this up follow the instructions of their website: 
-                                <a href='https://plaid.com/docs/quickstart/' target="_blank" rel="noreferrer">Plaid Inc.</a>
+                                <a href='https://plaid.com/docs/quickstart/' style={{textDecoration:'none'}} target="_blank" rel="noreferrer"> Plaid Inc.</a>
                                 <br></br>
                                 <br></br>
                                 Lastly, a backend utility needs to be created to run request to the API and feed results back to our app.
                                 This was taken from the Plaid Quickstart Github and modified for this project. The project is located here:
-                                <a href='https://github.com/plaid/quickstart' target="_blank" rel="noreferrer">Quickstart</a>
+                                <a href='https://github.com/plaid/quickstart' style={{textDecoration:'none'}} target="_blank" rel="noreferrer"> Quickstart</a>
                                 <br></br>
                                 <br></br>
                                 {"That's"} it! Once these three are set up and ready to go, it is a matter of putting it all together. 
@@ -271,22 +283,17 @@ class CapstonePage extends Component {
                                 <br></br>
                                 <br></br>
                                 There are going to be other obstacles but to each there own, good luck!
-                            </h4>
-                            <h4 style={{textAlign:'center'}}>
-                                <a href='https://github.com/franny1615/capstone_kotlin' target="_blank" rel="noreferrer">App Repo</a>  
-                                --<a href='https://github.com/franny1615/cap_backend' target="_blank" rel="noreferrer">Backend Repo</a>
-                            </h4>
+                            </h6>
                         </Row>
                     </Container>
                 </Row>
-                <hr></hr>
                 <Row>
                     <Container fluid>
                         <Row>
-                            <h4>Final Thoughts</h4>
+                            <h4><u>Final Thoughts</u></h4>
                         </Row>
                         <Row style={{marginLeft:30,marginRight:30}}>
-                            <h4>
+                            <h6>
                                 As mentioned in the academic poster, I managed to get this application working 
                                 in 60 days worth of time. This includes the learning of some concepts about Room,
                                 the Android Framework, XML, etc. However this {"doesn't"} include past programming 
@@ -318,18 +325,12 @@ class CapstonePage extends Component {
                                 All in all, I believe the fundamentals in how to write code, or how to manage SQL databases will remain largely the same. 
                                 But how UI is developed and what companies offer the tools to develop UI is always going to change. And the developer must
                                 be willing to adapt quickly or choose a different career path as they will slowly become uncompetitive.
-                            </h4>
+                            </h6>
                         </Row>
-                        <hr></hr>
                     </Container>
                 </Row>
-                <Row>
-                    <Comments />
-                </Row>
-            </Container>
-            </>
-        )
-    }
+                </Container>
+            </Row>
+        </Container>
+    )
 }
-
-export default CapstonePage

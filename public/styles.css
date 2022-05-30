@@ -1,0 +1,11 @@
+canvas {
+    margin: 0 auto;
+    width: 80% !important;
+    height: 80% !important;
+}
+
+iframe.capstone {
+    border-radius: 40px;
+    width: 500px;
+    height: 500px;
+}

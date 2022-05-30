@@ -1,5 +1,7 @@
-import Head from "next/head";
-import {Container, Navbar, Nav} from 'react-bootstrap';
+import Head from "next/head"
+import {Container } from 'react-bootstrap'
+import NavigationBar from "../components/navigationbar"
+import Footer from '../components/footer'
 
 export default function Layout({ children }) {
   return (
@@ -13,23 +15,11 @@ export default function Layout({ children }) {
             crossOrigin="anonymous"
         />
         </Head>
-        <Navbar bg="dark" expand="lg" variant='dark' style={{padding:'20px'}}>
-              <Container fluid>
-                <Navbar.Brand href="/">Portfolio</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/projects">Projects</Nav.Link>
-                    <Nav.Link href="/education">Education</Nav.Link>
-                    <Nav.Link href="/capstone">Capstone</Nav.Link>
-                  </Nav>
-                </Navbar.Collapse>
-              </Container>
-          </Navbar>
-        <div style={{background:'black', color:'white', fontFamily:'monospace',minHeight:'100vh',padding:10}}>
-          {children}
+        <div style={{background:'white', color:'black', minHeight:'100vh'}}>
+            <NavigationBar />
+            {children}
         </div>
+        <Footer />
     </>
   )
 }
