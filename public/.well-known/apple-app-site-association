@@ -1,15 +1,11 @@
 {
-  "applinks": {
-      "details": [
-           {
-             "appIDs": [ "JN9HYMVTYY.com.franciscofunes.deeplinktest" ],
-             "components": [
-               {
-                  "/": "/banana",
-                  "comment": ""
-               }
-             ]
-           }
-       ]
-   }
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "JN9HYMVTYY.com.franciscofunes.deeplinktest",
+                "paths": [ "/banana"]
+            }
+        ]
+    }
 }
