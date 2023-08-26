@@ -7,7 +7,7 @@ export default function Contact() {
             <Card>
                 <Card.Body>
                     <Card.Title>Francisco Funes</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">Mobile Developer</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted">Software Engineer</Card.Subtitle>
                     <Card.Text>Feel free to reach out to me for any inquiries</Card.Text>
                     <Container fluid>
                             <Row>

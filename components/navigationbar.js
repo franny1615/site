@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function NavigationBar() {
   return (
     <Navbar className="d-flex justify-content-center align-items-center" bg="dark" expand="lg" variant='light' >
-      <Navbar.Brand href="/">
+      <Navbar.Brand href="/" style={{margin:0}}>
         <h2 style={{ color: 'white', textAlign: 'center', margin: 0 }}>Francisco Funes</h2>
         <p style={{ color: 'white', textAlign: 'center', margin: 0 }}>Software Engineer</p>
       </Navbar.Brand>
