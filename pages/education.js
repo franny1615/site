@@ -1,7 +1,7 @@
 import {React, Component} from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
 import Image from 'next/image'
-import CILogo from '../public/logos/school/CIFormalLogo.png'
+import CILogo from '../public/logos/CIFormalLogo.webp'
 
 export default function Education() {
     return (
